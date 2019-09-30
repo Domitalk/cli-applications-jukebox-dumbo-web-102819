@@ -34,7 +34,7 @@ end
 
 def try_again
   puts "Please enter a command:"
-  user_command = gets.strip
+  gets.strip
 end
 
 def run(songs)
