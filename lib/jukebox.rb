@@ -38,25 +38,21 @@ def try_again
 end
 
 def run(songs)
-  puts "Please enter a command:"
-  user_command = gets.strip
+  user_command = ""
+  try_again
   while user_command != "exit"
     case user_command
     when "help"
       help
-      puts "Please enter a command:"
-      user_command = gets.strip
+      try_again
     when "list"
       list(songs)
-      puts "Please enter a command:"
-      user_command = gets.strip
+      try_again
     when "play"
       play(songs)
-      puts "Please enter a command:"
-      user_command = gets.strip
+      try_again
     else
-      puts "Please enter a command:"
-      user_command = gets.strip
+      try_again
     end
   end
   if user_command == "exit"
