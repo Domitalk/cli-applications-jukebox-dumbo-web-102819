@@ -32,26 +32,27 @@ def exit_jukebox
   puts "Goodbye"
 end
 
-def run(songs)
-  puts "Please enter a command:"
+def try_again
+  puts "Please enter a command"
   user_command = gets.strip
+end
+
+def run(songs)
+  user_command = ""
+  try_again
   while user_command != "exit"
     case user_command
     when "help"
       help
-      puts "Please enter a command:"
-      user_command = gets.strip
+      try_again
     when "list"
       list(songs)
-      puts "Please enter a command:"
-      user_command = gets.strip
+      try_again
     when "play"
       play(songs)
-      puts "Please enter a command:"
-      user_command = gets.strip
+      try_again
     else
-      puts "Please enter a command:"
-      user_command = gets.strip
+      try_again
     end
   end
   if user_command == "exit"
