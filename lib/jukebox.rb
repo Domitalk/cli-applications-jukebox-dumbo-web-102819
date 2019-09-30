@@ -38,21 +38,20 @@ def try_again
 end
 
 def run(songs)
-  user_command = ""
-  try_again
+  user_command = try_again
   while user_command != "exit"
     case user_command
     when "help"
       help
-      try_again
+      user_command = try_again
     when "list"
       list(songs)
-      try_again
+      user_command = try_again
     when "play"
       play(songs)
-      try_again
+      user_command = try_again
     else
-      try_again
+      user_command = try_again
     end
   end
   if user_command == "exit"
