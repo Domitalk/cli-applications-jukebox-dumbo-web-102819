@@ -38,7 +38,6 @@ def try_again
 end
 
 def run(songs)
-  user_command = ""
   user_command = try_again
   while user_command != "exit"
     case user_command
