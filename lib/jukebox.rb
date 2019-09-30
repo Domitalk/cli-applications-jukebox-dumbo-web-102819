@@ -41,10 +41,10 @@ def run
     help
     run
   elsif user_command == "list"
-    list(songs)
+    list
     run
   elsif user_command == "play"
-    play(songs)
+    play
     run
   else
     run
