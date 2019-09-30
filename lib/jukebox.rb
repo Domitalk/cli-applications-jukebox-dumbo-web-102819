@@ -54,7 +54,5 @@ def run(songs)
       user_command = try_again
     end
   end
-  if user_command == "exit"
-    exit_jukebox
-  end
+  exit_jukebox
 end
