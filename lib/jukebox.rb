@@ -35,7 +35,7 @@ end
 def run
   puts "Please enter a command:"
   user_command = gets.strip
-  if user_command == "exit" 
+  if user_command == "exit"
     exit_jukebox
   elsif user_command == "help"
     help
@@ -46,7 +46,7 @@ def run
   elsif user_command == "play"
     play(songs)
     run
-  else 
+  else
     run
   end
 end
